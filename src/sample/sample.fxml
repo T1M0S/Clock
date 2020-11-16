@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?language javascript?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+      <RadioButton fx:id="timerButton" layoutX="345.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="112.0" text="Timer" AnchorPane.leftAnchor="345.0" AnchorPane.rightAnchor="43.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <toggleGroup>
+            <ToggleGroup fx:id="radioBox" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="stopWatchButton" contentDisplay="TOP" graphicTextGap="6.0" layoutX="72.0" layoutY="18.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="112.0" selected="true" text="Stopwatch" toggleGroup="$radioBox" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="316.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </RadioButton>
+      <TextField fx:id="hh" alignment="CENTER" cache="true" layoutX="90.0" layoutY="51.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="72.0" prefWidth="88.0" text="00">
+          <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="75" />
+         </font>
+      <padding>
+         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+      </padding>
+      </TextField>
+      <Button fx:id="stopButton" layoutX="128.0" layoutY="247.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" text="STOP" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="277.0" AnchorPane.topAnchor="247.0" />
+      <Button fx:id="lapButton" layoutX="286.0" layoutY="247.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" text="LAP" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="286.0" AnchorPane.rightAnchor="119.0" AnchorPane.topAnchor="247.0" />
+      <Button fx:id="startButton" layoutX="196.0" layoutY="247.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="112.0" text="START" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="247.0" />
+      <Button fx:id="resetButton" layoutX="286.0" layoutY="247.0" mnemonicParsing="false" text="RESET" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="286.0" AnchorPane.rightAnchor="119.0" AnchorPane.topAnchor="247.0" />
+      <Button fx:id="resumeButton" layoutX="128.0" layoutY="248.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="95.0" text="RESUME" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="277.0" AnchorPane.topAnchor="247.0" />
+      <Button fx:id="pauseButton" layoutX="129.0" layoutY="252.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="75.0" text="PAUSE" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="277.0" AnchorPane.topAnchor="247.0" />
+      <Button fx:id="cancelButton" layoutX="320.0" layoutY="255.0" mnemonicParsing="false" text="CANCEL" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="286.0" AnchorPane.rightAnchor="119.0" AnchorPane.topAnchor="247.0" />
+   <TextField fx:id="mm" alignment="CENTER" cache="true" layoutX="205.0" layoutY="51.0" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="72.0" prefWidth="88.0" text="00">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <font>
+         <Font size="75" />
+      </font>
+      <padding>
+         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+      </padding>
+   </TextField>
+   <TextField fx:id="ss" alignment="CENTER" cache="true" layoutX="320.0" layoutY="51.0" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="72.0" prefWidth="88.0" text="00">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <font>
+         <Font size="75" />
+      </font>
+      <padding>
+         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+      </padding>
+   </TextField>
+   <Circle fill="#393737" layoutX="190.0" layoutY="73.0" radius="6.0" stroke="#fff0f0" strokeType="INSIDE" />
+   <Circle fill="#393737" layoutX="190.0" layoutY="101.0" radius="6.0" stroke="#fff0f0" strokeType="INSIDE" />
+   <Circle fill="#393737" layoutX="308.0" layoutY="73.0" radius="6.0" stroke="#fff0f0" strokeType="INSIDE" />
+   <Circle fill="#393737" layoutX="308.0" layoutY="101.0" radius="6.0" stroke="#fff0f0" strokeType="INSIDE" />
+   <TextFlow fx:id="textFlow" disable="true" layoutX="93.0" layoutY="150.0" lineSpacing="1.0" prefHeight="112.0" prefWidth="318.0" textAlignment="CENTER" />
+</AnchorPane>
